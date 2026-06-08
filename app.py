@@ -4,6 +4,16 @@ from pypdf import PdfReader
 
 # Page setup
 st.set_page_config(page_title="Document Detective", page_icon="🕵️‍♂️")
+# --- Custom Font Injection ---
+st.markdown(
+    """
+   <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+</style>
+    """,
+    unsafe_allow_html=True
+)
+# -----------------------------
 
 st.title("🕵️‍♂️ The Document Detective")
 st.write("Upload a PDF, and I will answer questions based **only** on its contents.")
